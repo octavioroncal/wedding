@@ -17,6 +17,17 @@
         $('#main_content').headsmart()
       })
     </script>
+    <script type="text/javascript">
+	//<![CDATA[  
+		google.load('maps', '2', {callback:simple});var map;
+		function simple(){	
+		if (GBrowserIsCompatible()) { 
+		var map = new GMap2(document.getElementById("map1"));
+		map.setCenter(new GLatLng(20.0972, -81.6503), 4);}}
+		window.onload=function(){simple();}
+		//]]>
+	</script>
+
     <title>La boda de Zenaida y Octavio</title>
   </head>
 
@@ -47,9 +58,13 @@
 
       <section id="main_content">
         <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Apartado 1</h3>
+<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lugar del evento</h3>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>La fiesta va tener lugar en el <strong>Hotel Rural Molino de Agua</strong>. El “Molino de Agua”, situado en el municipio de San Bartolomé de Tirajana (Gran Canaria), fue conocido hasta principios del Siglo XX como “Molino de Cazorla” o “El Molino de Arriba”. Localizado en el pago de “Los Cercados Altos de Fataga”, es uno de los mejores ejemplos de la recaudación y muela de agua en nuestra isla. Junto al molino se conservan restos de una antigua cueva vivienda con una cocina de leña y un horno de pan. </p>
+
+<img src="images/molino.jpg" alt="Molino de fataga" >
+<p>La web del hotel: <a href="http://www.elmolinodeagua.com">www.elmolinodeagua.com</a></p>
+<div id="map1" style="width:360px;height:200px;border:2px solid blue;"></div>
 
 <h3>
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Apartado 2</h3>
