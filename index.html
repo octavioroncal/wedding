@@ -18,18 +18,42 @@
         $('#main_content').headsmart()
       })
     </script>
+	// <script type="text/javascript">
+	// 	google.load('maps', '2' {callback:simple3});
+	// 	var map;	
+	// 	function simple3(){	
+	// 		if (GBrowserIsCompatible()) { 
+	// 			function createMarker(point,html) {
+	// 				var marker = new GMarker(point);
+	// 				GEvent.addListener(marker, "click", function() {
+	// 				marker.openInfoWindowHtml(html);});
+	// 				return marker;
+	// 			}			
+	// 			var map = new GMap2(document.getElementById("map1"));
+	// 			map.addControl(new GLargeMapControl());
+	// 			map.addControl(new GMapTypeControl());	  
+	// 			map.setCenter(new GLatLng(27.897046, -15.563067),13);
+	// 		}	  
+	// 		var point = new GLatLng(27.897046, -15.563067);
+	// 		var marker = createMarker(point,'<div style="width:240px">Hotel Rural Molino de Agua <a href="http://www.elmolinodeagua.com">Pagina web<\/a> con mas información<\/div>')
+	// 		map.addOverlay(marker);
+			
+	// 	}
+	// 	window.onload=function(){simple3();}
+	// </script>
 	<script type="text/javascript">
+		google.load('maps', '2', {callback:simple2});var map;
+		function simple2(){	
+			if (GBrowserIsCompatible()) { 
+				var map = new GMap2(document.getElementById("map"));
+				map.addControl(new GLargeMapControl());
+				map.addControl(new GMapTypeControl());	  
+				map.setCenter(new GLatLng(27.897046, -15.563067),7);
+			}
+		}
+		window.onload=function(){simple2();}
 
-google.load('maps', '2', {callback:simple2});var map;
-function simple2(){	
-if (GBrowserIsCompatible()) { 
-var map = new GMap2(document.getElementById("map1"));
-map.addControl(new GLargeMapControl());
-map.addControl(new GMapTypeControl());	  
-map.setCenter(new GLatLng(22.5200,-82.1100),7);}}
-window.onload=function(){simple2();}
-
-</script>
+	</script>
 
     <title>La boda de Zenaida y Octavio</title>
   </head>
