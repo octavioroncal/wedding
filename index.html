@@ -21,13 +21,23 @@
 	<script type="text/javascript">
 		google.load('maps', '2', {callback:simple2});var map;
 		function simple2(){	
-		if (GBrowserIsCompatible()) { 
-		var map = new GMap2(document.getElementById("map1"));
-		map.addControl(new GLargeMapControl());
-		map.addControl(new GMapTypeControl());	  
-		map.setCenter(new GLatLng(27.897062, -15.563085),7);}}
+			if (GBrowserIsCompatible()) {
+				function createMarker(point,html) {
+					var marker = new GMarker(point);
+					GEvent.addListener(marker, "click", function() {
+					marker.openInfoWindowHtml(html);});
+					return marker;
+				}			
+				var map = new GMap2(document.getElementById("map1"));
+				map.addControl(new GLargeMapControl());
+				map.addControl(new GMapTypeControl());	  
+				map.setCenter(new GLatLng(27.897062, -15.563085),16);
+			}
+			var point = new GLatLng(27.897062, -15.563085);
+			var marker = createMarker(point,'<div style="width:240px">El Capitolio de la Habana <a href="http://norfipc.com">Pagina web<\/a> con mas información<\/div>')
+			map.addOverlay(marker);
+		}
 		window.onload=function(){simple2();}
-
 	</script>
 
     <title>La boda de Zenaida y Octavio</title>
