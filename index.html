@@ -19,28 +19,8 @@
       })
     </script>
 	<script type="text/javascript">
-		google.load('maps', '2' {callback:simpleMap});var map;	
-		function simpleMap(){	
-			if (GBrowserIsCompatible()) { 
-			function createMarker(point,html) {
-				var marker = new GMarker(point);
-				GEvent.addListener(marker, "click", function() {
-				marker.openInfoWindowHtml(html);});
-				return marker;
-			}			
-			var map = new GMap2(document.getElementById("map1"));
-			map.addControl(new GLargeMapControl());
-			map.addControl(new GMapTypeControl());	  
-			map.setCenter(new GLatLng(27.897046, -15.563067),13);
-		}	  
-			var point = new GLatLng(27.897046, -15.563067);
-			var marker = createMarker(point,'<div style="width:240px">Hotel Rural Molino de Agua <a href="http://www.elmolinodeagua.com">Pagina web<\/a> con mas información<\/div>')
-			map.addOverlay(marker);
-			window.onload=function(){simpleMap();}
-	</script>
-
-	<script type="text/javascript">
-		google.load('maps', '2' {callback:simple3});var map;	
+		google.load('maps', '2' {callback:simple3});
+		var map;	
 		function simple3(){	
 			if (GBrowserIsCompatible()) { 
 				function createMarker(point,html) {
@@ -49,7 +29,6 @@
 					marker.openInfoWindowHtml(html);});
 					return marker;
 				}			
-				
 				var map = new GMap2(document.getElementById("map1"));
 				map.addControl(new GLargeMapControl());
 				map.addControl(new GMapTypeControl());	  
@@ -99,7 +78,7 @@
 
 <img src="images/molino.jpg" alt="Molino de fataga" >
 <p>La web del hotel: <a href="http://www.elmolinodeagua.com">www.elmolinodeagua.com</a></p>
-<div id="map1" style="width:300px; height:200px;border:1px solid brown;"></div>
+<div id="map1" style="height:200px;border:1px solid brown;"></div>
 
 <h3>
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Apartado 2</h3>
